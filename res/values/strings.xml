@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tweak the Tweet</string>
+    
+    <string name="action_settings">Settings</string>
+    <string name="title_section1">#disaster</string>
+    <string name="title_section2">#location</string>
+    <string name="title_section3">#category</string>
+    <string name="title_section4">#more info</string>
+    
+    <string name="yourTweet">your tweet </string>
+    <string name="tweetCount">140</string>
+    <string name="tweetTextbox">empty</string>
+    <string name="submit">Submit</string>
+
+</resources>
