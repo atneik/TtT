@@ -173,5 +173,8 @@ OnMyLocationButtonClickListener {
 	private void updateTextView(){
 		 TextView tweetTextView = (TextView) findViewById(R.id.tweetText);
 	     tweetTextView.setText(TtT.getTweetText());
+	     
+	     TextView tweetCount = (TextView) findViewById(R.id.tweetCount);
+	     tweetCount.setText(TtT.getTweetLeft().toString());
 	}
 }

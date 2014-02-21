@@ -51,5 +51,9 @@ public class DisasterActivity extends Activity {
     private void updateTextView(){
 		 TextView tweetTextView = (TextView) findViewById(R.id.tweetText);
 	     tweetTextView.setText(TtT.getTweetText());
+
+	     TextView tweetCount = (TextView) findViewById(R.id.tweetCount);
+	     //Log.d("count", TtT.getTweetLeft());
+	     tweetCount.setText(TtT.getTweetLeft().toString());
 	}
 }

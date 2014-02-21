@@ -10,14 +10,19 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MoreInfoActivity extends Activity {
+	
+	EditText mEdit;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_moreinfo);
+		
+		mEdit = (EditText)findViewById(R.id.editText1);
 	}
 	
 	@Override
@@ -66,18 +71,22 @@ public class MoreInfoActivity extends Activity {
 	@Override
     public void onBackPressed()
     {
-		Intent intent = new Intent(this, CategoryActivity.class);
+		Intent intent = new Intent(this, CatMoreActivity.class);
 	    startActivity(intent);
 	    intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 	    super.onBackPressed(); 
     }
     	
     public void callTweetIntent(View v) {
+    	TtT.setMoreInfo(mEdit.getText().toString());
         mTweetHandler.removeCallbacks(mTweetRunnable);
         mTweetHandler.post(mTweetRunnable);
     }
     private void updateTextView(){
 		 TextView tweetTextView = (TextView) findViewById(R.id.tweetText);
 	     tweetTextView.setText(TtT.getTweetText());
+	     
+	     TextView tweetCount = (TextView) findViewById(R.id.tweetCount);
+	     tweetCount.setText(TtT.getTweetLeft().toString());
 	}
 }

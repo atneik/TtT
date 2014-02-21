@@ -7,6 +7,7 @@
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="19" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
   	<uses-permission android:name="android.permission.INTERNET"/>
   	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
@@ -62,9 +63,16 @@
     	</activity>
     	
     	<activity
+        android:name="com.atneik.ttt.CatMoreActivity"
+        android:label="@string/title_section3"
+        android:parentActivityName="com.atneik.ttt.CategoryActivity"
+    	 >
+    	</activity>
+    	
+    	<activity
         android:name="com.atneik.ttt.MoreInfoActivity"
         android:label="@string/title_section4"
-        android:parentActivityName="com.atneik.ttt.CategoryActivity"
+        android:parentActivityName="com.atneik.ttt.CatMoreActivity"
          >
     	</activity>
         

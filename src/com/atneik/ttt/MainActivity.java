@@ -2,6 +2,7 @@ package com.atneik.ttt;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -27,5 +28,11 @@ public class MainActivity extends Activity {
 	public void createTweet(View view) {
 		Intent intent = new Intent(this, DisasterActivity.class);
 	    startActivity(intent);
+	}
+	public void call911(View v){
+		Intent callIntent = new Intent(Intent.ACTION_CALL);
+		callIntent.setData(Uri.parse("tel:911"));
+		callIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); 
+		startActivity(callIntent);
 	}
 }

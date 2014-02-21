@@ -15,8 +15,6 @@
         android:background="#fdfbe9"
         android:text="@string/yourTweet" />
 
-   
-
     <TextView
         android:id="@+id/tweetCount"
         android:layout_width="wrap_content"
@@ -40,15 +38,34 @@
         android:maxLength="140"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-     <Button
-         android:id="@+id/button1"
-         android:layout_width="fill_parent"
-         android:layout_height="wrap_content"
-         android:layout_alignLeft="@+id/tweetText"
-         android:layout_alignParentBottom="true"
-         android:layout_marginBottom="32dp"
-         android:text="@string/submit"
-         android:onClick="callTweetIntent"
-         android:visibility="visible" />
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tweetText"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:onClick="callTweetIntent"
+        android:text="@string/submit"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tweetText"
+        android:layout_below="@+id/tweetText"
+        android:text="Enter More Info"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignRight="@+id/tweetText"
+        android:layout_below="@+id/textView3"
+        android:ems="10"
+        android:inputType="textMultiLine" />
 
 </RelativeLayout>

@@ -6,11 +6,12 @@ import android.util.Log;
 public class TtT extends Application{
 	
 	private static String tweetText = "";
-	private static Integer countLeft = null;
+	private static Integer countLeft = 140;
 	
 	private static String disaster = null;
 	private static String location = null;
 	private static String category = null;
+	private static String catMore = null;
 	private static String moreInfo = null;
 	
 	private static void updateTweet(){
@@ -19,11 +20,13 @@ public class TtT extends Application{
 		if(disaster != null)
 			tweetText += "#" + disaster;
 		if(location != null)
-			tweetText += " #" + location;
+			tweetText += " #loc " + location;
 		if(category != null)
 			tweetText += " #" + category;
+		if(catMore != null)
+			tweetText += " " + catMore;
 		if(moreInfo != null)
-			tweetText += " #" + moreInfo;
+			tweetText += " #more " + moreInfo + " ";
 		
 		countLeft = 140 - tweetText.length();
 		
@@ -54,12 +57,20 @@ public class TtT extends Application{
     	Log.d("set-moreinfo",moreInfo);
     	updateTweet();
     }
+	public static void setCatMore(String more){
+    	catMore = more;
+    	Log.d("set-moreinfo",catMore);
+    	updateTweet();
+    }
 	
 	public static String getTweetText(){
 		return tweetText;
 	}
+	public static Integer getTweetLeft(){
+		return countLeft;
+	}
 	public static void reset(){
-		disaster = location = category =  moreInfo = null;
+		disaster = location = category =  moreInfo = catMore = null;
 		updateTweet();
 	}
 

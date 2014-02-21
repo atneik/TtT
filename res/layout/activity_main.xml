@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent"
+    android:background="#fff" >
 
     <TextView
         android:id="@+id/textView1"
@@ -8,8 +9,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:text="Remember! If you need Immediate help"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:gravity="center_horizontal"
+        android:text="Remember! 
+If you need Immediate help"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="24dp"
+        android:typeface="sans" />
 
     <Button
         android:id="@+id/button2"
@@ -35,8 +40,17 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
             android:drawableRight="@android:drawable/sym_action_call"
-            android:text="CALL 911" />
+            android:text="CALL 911" 
+            android:onClick="call911"/>
 
     </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/loadingscreen" />
 
 </RelativeLayout>

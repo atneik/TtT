@@ -50,7 +50,7 @@ public class CategoryActivity extends Activity {
     }
 	
 	public void callMoreInfo(View view) {
-		Intent intent = new Intent(this, MoreInfoActivity.class);
+		Intent intent = new Intent(this, CatMoreActivity.class);
 		intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 	    startActivity(intent);
 	    finish();
@@ -59,5 +59,8 @@ public class CategoryActivity extends Activity {
 	private void updateTextView(){
 		 TextView tweetTextView = (TextView) findViewById(R.id.tweetText);
 	     tweetTextView.setText(TtT.getTweetText());
+	     
+	     TextView tweetCount = (TextView) findViewById(R.id.tweetCount);
+	     tweetCount.setText(TtT.getTweetLeft().toString());
 	}
 }
