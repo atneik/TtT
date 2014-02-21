@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:text="Medium Text"
+        android:text="Remember! If you need Immediate help"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
@@ -19,7 +19,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:onClick="createTweet"
-        android:text="Button" />
+        android:text="Start Tweaking" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
             android:drawableRight="@android:drawable/sym_action_call"
-            android:text="Button" />
+            android:text="CALL 911" />
 
     </RelativeLayout>
 

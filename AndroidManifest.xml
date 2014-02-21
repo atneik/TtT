@@ -28,7 +28,7 @@
         android:name=".TtT" 
         android:hardwareAccelerated="true">
         <meta-data android:name="com.google.android.maps.v2.API_KEY"
-    		android:value="AIzaSyCvGBr5in13NK2yYBR7lhXTtnxj3mrXQy4"/>
+    		android:value="AIzaSyA_ohDp86JYIuOFdjdbo1yKv0kfs92Rh2U"/>
     	<meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
