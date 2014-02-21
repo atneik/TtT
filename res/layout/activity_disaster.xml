@@ -40,20 +40,12 @@
         android:maxLength="140"
         android:textAppearance="?android:attr/textAppearanceMedium" />
     
-     <Button
-        android:id="@+id/button1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tweetText"
-        android:layout_marginBottom="27dp"
-        android:text="@string/submit"
-        android:visibility="gone" />
-    
     	<GridView
     	    android:id="@+id/gridview"
     	    android:layout_width="fill_parent"
     	    android:layout_height="fill_parent"
-    	    android:layout_below="@id/button1"
+    	    android:layout_above="@+id/editText1"
+    	    android:layout_below="@id/tweetText"
     	    android:columnWidth="90dp"
     	    android:gravity="center"
     	    android:horizontalSpacing="10dp"
@@ -61,5 +53,17 @@
     	    android:paddingTop="10dp"
     	    android:stretchMode="columnWidth"
     	    android:verticalSpacing="10dp" />
+
+    	<EditText
+    	    android:id="@+id/editText1"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignLeft="@+id/gridview"
+    	    android:layout_alignParentBottom="true"
+    	    android:layout_alignRight="@+id/gridview"
+    	    android:ems="10" >
+
+    	    <requestFocus />
+    	</EditText>
 
 </RelativeLayout>
