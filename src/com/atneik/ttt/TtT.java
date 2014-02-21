@@ -19,11 +19,11 @@ public class TtT extends Application{
 		if(disaster != null)
 			tweetText += "#" + disaster;
 		if(location != null)
-			tweetText += "#" + location;
+			tweetText += " #" + location;
 		if(category != null)
-			tweetText += "#" + category;
+			tweetText += " #" + category;
 		if(moreInfo != null)
-			tweetText += "#" + moreInfo;
+			tweetText += " #" + moreInfo;
 		
 		countLeft = 140 - tweetText.length();
 		

@@ -7,10 +7,10 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 
-public class ImageAdapter extends BaseAdapter {
+public class CatImageAdapter extends BaseAdapter {
     private Context mContext;
 
-    public ImageAdapter(Context c) {
+    public CatImageAdapter(Context c) {
         mContext = c;
     }
 
@@ -44,6 +44,8 @@ public class ImageAdapter extends BaseAdapter {
 
     // references to our images
     private Integer[] mThumbIds = {
-            R.drawable.haiti, R.drawable.seattle, R.drawable.delhi, R.drawable.tokyo, R.drawable.nyc
+          //  R.drawable.tsunami, R.drawable.earthquake
+    		R.drawable.need, R.drawable.offer, R.drawable.shelter, R.drawable.damage, R.drawable.power
+    		
     };
 }

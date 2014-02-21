@@ -9,15 +9,10 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class DisasterActivity extends Activity {
-	/**
-	 * The fragment argument representing the section number for this
-	 * fragment.
-	 */
-	public static final String ARG_SECTION_NUMBER = "section_number";
-
+	
+	private String[] name ={"haiti","seattle","delhi","tokyo","nyc"};
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +30,13 @@ public class DisasterActivity extends Activity {
 
 		    gridview.setOnItemClickListener(new OnItemClickListener() {
 		        public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-		            Toast.makeText(getApplicationContext(), "" + position + v.toString() , Toast.LENGTH_SHORT).show();
-		            Log.d("image", v.toString());
-		            v.animate().scaleXBy(position);
+		            //Toast.makeText(getApplicationContext(), "" + position + v.toString() , Toast.LENGTH_SHORT).show();
+		            //Log.d("image", position + Resources.getSystem().getResourcePackageName((int) id) +"--"+ Resources.getSystem().getString((int)id));
+		        	Log.d("image", position +"--"+Double.toString(id));
+		            TtT.setDisaster(name[position]);
+		            //v.animate().scaleXBy(position);
 		            callLocation(v);
+		            
 		        }
 		    });
 		    updateTextView();

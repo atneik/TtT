@@ -9,26 +9,24 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class CategoryActivity extends Activity {
 	
-	View v;
+	private String[] name ={"need","offer","shelter","damage","power"};
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_category);
 		
 		GridView gridview = (GridView) findViewById(R.id.gridview);
-		
-	    gridview.setAdapter(new ImageAdapter(this));
+	    gridview.setAdapter(new CatImageAdapter(this));
 
 	    gridview.setOnItemClickListener(new OnItemClickListener() {
 	        public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-	            Toast.makeText(getApplicationContext(), "" + position , Toast.LENGTH_SHORT).show();
-	            Log.d("image", v.toString());
-	            v.animate().scaleXBy(position);
-	            TtT.setCategory("Hello");
+	            
+	        	Log.d("image", v.toString());
+	            TtT.setCategory(name[position]);
 	            updateTextView();
 	            callMoreInfo(v);
 	        }
